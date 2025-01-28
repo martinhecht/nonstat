@@ -1,0 +1,2 @@
+importFrom("stats", "loess", "predict", "var")
+export(is.nonstat)
