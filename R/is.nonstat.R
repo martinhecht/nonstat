@@ -10,6 +10,10 @@
 #' @param cut.psr2 threshold for PSR value that indicates variance non-stationarity
 #' @param span numerical value that is passed to the \code{loess} function
 #' @return a logical scalar indicating whether the time series is stationary (\code{TRUE}) or not (\code{FALSE})
+#' @examples
+#' set.seed( 1234 )
+#' x <- rnorm( 100 )
+#' is.nonstat( x )
 
 ## Function definition
 is.nonstat <- function( tseries, nEp=2, cut.psr1=1.10, cut.psr2=1.01, span=3 ){
@@ -42,7 +46,7 @@ is.nonstat <- function( tseries, nEp=2, cut.psr1=1.10, cut.psr2=1.01, span=3 ){
 # }
 
 # set.seed( 1234 )
-# x <- rnorm(100)
+# x <- rnorm( 100 )
 # is.nonstat( x )
 
 

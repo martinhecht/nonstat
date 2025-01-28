@@ -23,3 +23,8 @@ a logical scalar indicating whether the time series is stationary (\code{TRUE}) 
 \description{
 This function tests whether a time series is stationary or not
 }
+\examples{
+set.seed( 1234 )
+x <- rnorm( 100 )
+is.nonstat( x )
+}
