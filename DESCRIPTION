@@ -1,16 +1,15 @@
 Package: nonstat
 Type: Package
 Title: Detecting Nonstationarity in Time Series
-Version: 0.0.1
-Date: 2025-01-28
-Author: Martin Hecht, Steffen Zitzmann
+Version: 0.0.2
+Authors@R: c(
+    person(given = "Martin", family = "Hecht", email = "martin.hecht@hsu-hh.de", role = c("aut", "cre")),
+    person(given = "Steffen", family = "Zitzmann", email = "steffen.zitzmann@medicalschool-hamburg.de", role = "aut"))
 Maintainer: Martin Hecht <martin.hecht@hsu-hh.de>
 Description: Offers tools for detecting nonstationarity in time series.
-License: GPL (>= 2)
+License: GPL-3
 Depends: R (>= 3.5.0)
-Suggests:
-Imports:
-LinkingTo:
 NeedsCompilation: no
 Encoding: UTF-8
+Language: en-US
 RoxygenNote: 7.3.2
