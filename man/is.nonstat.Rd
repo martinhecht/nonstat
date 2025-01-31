@@ -28,3 +28,6 @@ set.seed( 1234 )
 x <- rnorm( 100 )
 is.nonstat( x )
 }
+\references{
+Zitzmann, S., Lindner, C., Lohmann, J. F., & Hecht, M. (2024). A novel nonvisual procedure for screening for nonstationarity in time series as obtained from intensive longitudinal designs [Preprint]. https://www.researchgate.net/publication/384354932_A_Novel_Nonvisual_Procedure_for_ Screening_for_Nonstationarity_in_Time_Series_as_Obtained_from_Intensive_Longitudinal_Designs
+}
