@@ -24,8 +24,8 @@ a logical scalar indicating whether the time series is stationary (\code{TRUE}) 
 This function tests whether a time series is stationary or not
 }
 \examples{
-set.seed( 1234 )
-x <- rnorm( 100 )
+set.seed( 8332278 )
+x <- rnorm( 50 )
 is.nonstat( x )
 }
 \references{

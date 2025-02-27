@@ -1,6 +1,9 @@
 ## Changelog:
 # MH 0.0.1 2025-01-29: initial
 # MH 0.0.3 2025-01-31: mod and checks on time series epoch length
+# MH 0.0.5 2025-02-25: changed seed of the example so that FALSE (true positive) results
+#                      changed example from T=100 to T=50
+
 
 ## Documentation
 #' @title Test for nonstationarity
@@ -14,8 +17,8 @@
 #' @references
 #' Zitzmann, S., Lindner, C., Lohmann, J. F., & Hecht, M. (2024). A novel nonvisual procedure for screening for nonstationarity in time series as obtained from intensive longitudinal designs [Preprint]. https://www.researchgate.net/publication/384354932_A_Novel_Nonvisual_Procedure_for_ Screening_for_Nonstationarity_in_Time_Series_as_Obtained_from_Intensive_Longitudinal_Designs
 #' @examples
-#' set.seed( 1234 )
-#' x <- rnorm( 100 )
+#' set.seed( 8332278 )
+#' x <- rnorm( 50 )
 #' is.nonstat( x )
 
 ## Function definition
