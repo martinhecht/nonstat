@@ -3,19 +3,19 @@
 # MH 0.0.3 2025-01-31: mod and checks on time series epoch length
 # MH 0.0.5 2025-02-25: changed seed of the example so that FALSE (true positive) results
 #                      changed example from T=100 to T=50
-
+# MH 0.0.6 2025-03-30: updated documentation
 
 ## Documentation
 #' @title Test for nonstationarity
-#' @description This function tests whether a time series is stationary or not
+#' @description Applies a nonvisual, diagnostic-based screening procedure to determine whether a univariate time series violates the assumption of stationarity. Specifically, the function evaluates (a) the presence of a trend and (b) changes in variance over time. These two dimensions of nonstationarity are assessed using two R-hat-type statistics adapted from Bayesian convergence diagnostics and Levene's test.
 #' @param tseries a numerical vector
 #' @param nEp number of epochs (in which time series is cut for PSR calculation)
-#' @param cut.psr1 threshold for PSR value that indicates mean non-stationarity
-#' @param cut.psr2 threshold for PSR value that indicates variance non-stationarity
+#' @param cut.psr1 threshold for the trend diagnostic, Rhat(1), which assesses whether a process is trending
+#' @param cut.psr2 threshold for the changing variance diagnostic, Rhat(2), which assesses whether the processe's variance is changing over time
 #' @param span numerical value that is passed to the \code{loess} function
-#' @return a logical scalar indicating whether the time series is stationary (\code{TRUE}) or not (\code{FALSE})
+#' @return a logical scalar indicating whether the prcoess has been diagnosed as non-stationary (\code{TRUE}) or stationary (\code{FALSE})
 #' @references
-#' Zitzmann, S., Lindner, C., Lohmann, J. F., & Hecht, M. (2024). A novel nonvisual procedure for screening for nonstationarity in time series as obtained from intensive longitudinal designs [Preprint]. https://www.researchgate.net/publication/384354932_A_Novel_Nonvisual_Procedure_for_ Screening_for_Nonstationarity_in_Time_Series_as_Obtained_from_Intensive_Longitudinal_Designs
+#' Zitzmann, S., Lindner, C., Lohmann, J. F., & Hecht, M. (2024). "A Novel Nonvisual Procedure for Screening for Nonstationarity in Time Series as Obtained from Intensive Longitudinal Designs" \href{https://www.researchgate.net/publication/384354932_A_Novel_Nonvisual_Procedure_for_Screening_for_Nonstationarity_in_Time_Series_as_Obtained_from_Intensive_Longitudinal_Designs}{Preprint}
 #' @examples
 #' set.seed( 8332278 )
 #' x <- rnorm( 50 )

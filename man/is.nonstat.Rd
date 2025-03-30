@@ -11,17 +11,17 @@ is.nonstat(tseries, nEp = 2, cut.psr1 = 1.1, cut.psr2 = 1.01, span = 3)
 
 \item{nEp}{number of epochs (in which time series is cut for PSR calculation)}
 
-\item{cut.psr1}{threshold for PSR value that indicates mean non-stationarity}
+\item{cut.psr1}{threshold for the trend diagnostic, Rhat(1), which assesses whether a process is trending}
 
-\item{cut.psr2}{threshold for PSR value that indicates variance non-stationarity}
+\item{cut.psr2}{threshold for the changing variance diagnostic, Rhat(2), which assesses whether the processe's variance is changing over time}
 
 \item{span}{numerical value that is passed to the \code{loess} function}
 }
 \value{
-a logical scalar indicating whether the time series is stationary (\code{TRUE}) or not (\code{FALSE})
+a logical scalar indicating whether the prcoess has been diagnosed as non-stationary (\code{TRUE}) or stationary (\code{FALSE})
 }
 \description{
-This function tests whether a time series is stationary or not
+Applies a nonvisual, diagnostic-based screening procedure to determine whether a univariate time series violates the assumption of stationarity. Specifically, the function evaluates (a) the presence of a trend and (b) changes in variance over time. These two dimensions of nonstationarity are assessed using two R-hat-type statistics adapted from Bayesian convergence diagnostics and Levene's test.
 }
 \examples{
 set.seed( 8332278 )
@@ -29,5 +29,5 @@ x <- rnorm( 50 )
 is.nonstat( x )
 }
 \references{
-Zitzmann, S., Lindner, C., Lohmann, J. F., & Hecht, M. (2024). A novel nonvisual procedure for screening for nonstationarity in time series as obtained from intensive longitudinal designs [Preprint]. https://www.researchgate.net/publication/384354932_A_Novel_Nonvisual_Procedure_for_ Screening_for_Nonstationarity_in_Time_Series_as_Obtained_from_Intensive_Longitudinal_Designs
+Zitzmann, S., Lindner, C., Lohmann, J. F., & Hecht, M. (2024). "A Novel Nonvisual Procedure for Screening for Nonstationarity in Time Series as Obtained from Intensive Longitudinal Designs" \href{https://www.researchgate.net/publication/384354932_A_Novel_Nonvisual_Procedure_for_Screening_for_Nonstationarity_in_Time_Series_as_Obtained_from_Intensive_Longitudinal_Designs}{Preprint}
 }
