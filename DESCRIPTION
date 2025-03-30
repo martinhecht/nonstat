@@ -1,7 +1,7 @@
 Package: nonstat
 Type: Package
 Title: Detecting Nonstationarity in Time Series
-Version: 0.0.4
+Version: 0.0.5
 Authors@R: c(
     person(given = "Martin", family = "Hecht", email = "martin.hecht@hsu-hh.de", role = c("aut", "cre")),
     person(given = "Steffen", family = "Zitzmann", email = "steffen.zitzmann@medicalschool-hamburg.de", role = "aut"))
